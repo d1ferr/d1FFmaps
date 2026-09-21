@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — d1FFmaps</title>
+  <style>
+    body { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; background: #fff; color: #1a1a1a;
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    h1 { font-size: 26px; margin-bottom: 4px; }
+    h2 { font-size: 19px; margin-top: 32px; }
+    .date { color: #666; margin-top: 0; }
+    code { background: #f2f2f4; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+    ul { padding-left: 22px; }
+    footer { margin-top: 40px; color: #666; font-size: 14px; }
+    .lang { color: #666; font-size: 14px; margin: 0 0 24px; }
+    hr { margin: 56px 0 40px; border: 0; border-top: 1px solid #ddd; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #16161a; color: #e8e8ea; }
+      code { background: #26262e; }
+      .date, footer, .lang { color: #9a9aa4; }
+      hr { border-top-color: #2c2c33; }
+    }
+  </style>
+</head>
+<body>
+  <p class="lang"><a href="#en">English</a> · <a href="#ru">Русский</a></p>
+
+  <h1 id="en">Privacy Policy</h1>
+  <p class="date">d1FFmaps · updated 21 September 2026</p>
+
+  <h2>Who and what</h2>
+  <p>This policy covers the browser extension <b>d1FFmaps</b> — a lobby analyzer for FACEIT CS2
+     (the "Extension"), developed and maintained by <b>d1FF</b> (the "Developer").</p>
+
+  <h2>In short</h2>
+  <p>The Extension does not collect, store remotely, or share any user data with third parties.
+     It has no backend server, no analytics, and no telemetry.</p>
+
+  <h2>What data is processed</h2>
+  <ul>
+    <li><b>FACEIT Data API key</b> — entered by the user, stored in <code>chrome.storage.local</code>
+        inside their browser, and used only as an authorization header for requests to
+        <code>https://open.faceit.com</code>. The Developer never receives it and has no access to it.</li>
+    <li><b>FACEIT nickname</b> — entered by the user, stored in the same place, used only so that
+        win probabilities are shown for the user's own team.</li>
+    <li><b>Model settings</b> — numeric coefficients, stored in the same place.</li>
+    <li><b>Public player statistics of the match</b> — requested from the FACEIT Data API when a match
+        page is opened, displayed on screen and kept in memory for no longer than the browser session.
+        Nothing is written to disk.</li>
+  </ul>
+
+  <h2>Where requests go</h2>
+  <p>The only external endpoint is <code>https://open.faceit.com</code> (the official FACEIT Data API).
+     The Extension makes no other network requests. Processing on the FACEIT side is governed by
+     FACEIT's own privacy policy.</p>
+
+  <h2>What the Extension does not do</h2>
+  <ul>
+    <li>does not read or transmit browsing history, page content, cookies, or clipboard;</li>
+    <li>does not display ads and does not modify links;</li>
+    <li>does not sell or share data with third parties;</li>
+    <li>does not load or execute remotely hosted code.</li>
+  </ul>
+
+  <h2>Permissions and why they are needed</h2>
+  <ul>
+    <li><code>storage</code> — keep the key, nickname and settings inside the browser.</li>
+    <li><code>activeTab</code> — when the toolbar icon is clicked, read the address of the open match
+        page to extract the match identifier.</li>
+    <li>Host access to <code>https://open.faceit.com/*</code> — request public statistics.</li>
+    <li>Content script on <code>https://www.faceit.com/*</code> — render the analysis panel on the
+        match page.</li>
+  </ul>
+
+  <h2>Data deletion</h2>
+  <p>The user can delete all Extension data at any time, without contacting the Developer:</p>
+  <ul>
+    <li><b>Delete the API key</b> — open the Extension options and press "Удалить ключ" (Delete key).
+        The key is removed from <code>chrome.storage.local</code> immediately.</li>
+    <li><b>Delete the nickname and settings</b> — clear the corresponding fields on the same page and save.</li>
+    <li><b>Delete everything at once</b> — remove the Extension in the browser
+        (<code>chrome://extensions</code> → Remove). The browser wipes its entire storage.</li>
+    <li><b>Revoke the key on FACEIT's side</b> — delete the key or the app at
+        <a href="https://developers.faceit.com/apps">developers.faceit.com</a>.</li>
+  </ul>
+  <p>There is nothing to request from the Developer: no copies of user data exist on the Developer's
+     side, because the data never leaves the browser.</p>
+
+  <h2>Children</h2>
+  <p>The Extension is not directed to children under 13 and does not knowingly collect any data from
+     them — just as it collects no data from any other user.</p>
+
+  <h2>Changes</h2>
+  <p>If a future version starts collecting any data, this page will be updated, the collection will be
+     optional, and it will be described in the store listing before the update ships.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about the Extension or this policy:
+     <a href="mailto:zieglerdoris461@gmail.com">zieglerdoris461@gmail.com</a></p>
+
+  <footer>This Extension is unofficial and is not affiliated with FACEIT Ltd. or Valve Corporation.
+    FACEIT and CS2 are trademarks of their respective owners.</footer>
+
+  <hr />
+
+  <h1 id="ru">Политика конфиденциальности</h1>
+  <p class="date">d1FFmaps · обновлено 21 сентября 2026</p>
+
+  <h2>Кто и что</h2>
+  <p>Эта политика относится к расширению браузера <b>d1FFmaps</b> — анализатор лобби FACEIT CS2
+     («Расширение»), которое разрабатывает и поддерживает <b>d1FF</b> («Разработчик»).</p>
+
+  <h2>Коротко</h2>
+  <p>Расширение не собирает, не хранит на стороне и не передаёт третьим лицам никакие данные
+     пользователя. У расширения нет собственного сервера, аналитики и телеметрии.</p>
+
+  <h2>Какие данные обрабатываются</h2>
+  <ul>
+    <li><b>Ключ FACEIT Data API</b> — вводится пользователем, хранится в <code>chrome.storage.local</code>
+        внутри его браузера и используется только как заголовок авторизации при запросах
+        к <code>https://open.faceit.com</code>. Разработчику ключ не передаётся и ему недоступен.</li>
+    <li><b>Никнейм FACEIT</b> — вводится пользователем, хранится там же, нужен лишь для того,
+        чтобы проценты в отчёте считались за его команду.</li>
+    <li><b>Настройки расчёта</b> — числовые коэффициенты модели, хранятся там же.</li>
+    <li><b>Публичная статистика игроков матча</b> — запрашивается у FACEIT Data API в момент
+        открытия страницы матча, показывается на экране и держится в оперативной памяти
+        не дольше сессии браузера. На диск не записывается.</li>
+  </ul>
+
+  <h2>Куда уходят запросы</h2>
+  <p>Единственный внешний адрес — <code>https://open.faceit.com</code> (официальный Data API FACEIT).
+     Других сетевых обращений расширение не делает. Обработка данных на стороне FACEIT регулируется
+     политикой конфиденциальности FACEIT.</p>
+
+  <h2>Чего расширение не делает</h2>
+  <ul>
+    <li>не читает и не передаёт историю просмотров, содержимое страниц, куки и буфер обмена;</li>
+    <li>не показывает рекламу и не подменяет ссылки;</li>
+    <li>не продаёт и не передаёт данные третьим лицам;</li>
+    <li>не загружает и не выполняет код с внешних серверов.</li>
+  </ul>
+
+  <h2>Разрешения и зачем они</h2>
+  <ul>
+    <li><code>storage</code> — сохранить ключ, ник и настройки внутри браузера.</li>
+    <li><code>activeTab</code> — при нажатии на иконку узнать адрес открытой страницы матча,
+        чтобы извлечь из него идентификатор матча.</li>
+    <li>Доступ к <code>https://open.faceit.com/*</code> — запрос публичной статистики.</li>
+    <li>Скрипт на страницах <code>https://www.faceit.com/*</code> — отрисовка панели с анализом
+        на странице матча.</li>
+  </ul>
+
+  <h2>Удаление данных</h2>
+  <p>Пользователь в любой момент может удалить все данные Расширения самостоятельно,
+     без обращения к Разработчику:</p>
+  <ul>
+    <li><b>Удалить ключ API</b> — открыть настройки Расширения и нажать «Удалить ключ».
+        Ключ немедленно стирается из <code>chrome.storage.local</code>.</li>
+    <li><b>Удалить ник и настройки расчёта</b> — очистить соответствующие поля на той же
+        странице и сохранить.</li>
+    <li><b>Удалить всё сразу</b> — удалить Расширение в браузере
+        (<code>chrome://extensions</code> → «Удалить»). Браузер стирает всё его хранилище.</li>
+    <li><b>Отозвать ключ на стороне FACEIT</b> — в личном кабинете
+        <a href="https://developers.faceit.com/apps">developers.faceit.com</a>
+        удалить ключ или приложение.</li>
+  </ul>
+  <p>Запрашивать удаление данных у Разработчика не нужно и не у чего: копий данных
+     пользователя у Разработчика нет — они не покидают браузер.</p>
+
+  <h2>Дети</h2>
+  <p>Расширение не предназначено для детей младше 13 лет и не собирает от них никаких данных
+     осознанно — как и от любых других пользователей.</p>
+
+  <h2>Изменения</h2>
+  <p>Если в будущей версии появится сбор каких-либо данных, эта страница будет обновлена,
+     а сбор будет отключаемым и описан в карточке расширения до обновления.</p>
+
+  <h2>Контакт</h2>
+  <p>Вопросы по расширению и этой политике: <a href="mailto:zieglerdoris461@gmail.com">zieglerdoris461@gmail.com</a></p>
+
+  <footer>Расширение неофициальное и не связано с FACEIT Ltd. и Valve Corporation.
+    FACEIT и CS2 — товарные знаки их владельцев.</footer>
+</body>
+</html>
