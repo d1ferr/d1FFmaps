@@ -27,7 +27,7 @@
   <p class="lang"><a href="#en">English</a> · <a href="#ru">Русский</a></p>
 
   <h1 id="en">Privacy Policy</h1>
-  <p class="date">d1FFmaps · updated 21 September 2026</p>
+  <p class="date">d1FFmaps · updated 22 September 2026</p>
 
   <h2>Who and what</h2>
   <p>This policy covers the browser extension <b>d1FFmaps</b> — a lobby analyzer for FACEIT CS2
@@ -73,6 +73,33 @@
         match page.</li>
   </ul>
 
+  <h2>Storage and security</h2>
+  <ul>
+    <li>All data stays on the user's device, in the browser's own extension storage
+        (<code>chrome.storage.local</code>). The Extension has no server, so there is nothing
+        to transmit or store remotely.</li>
+    <li>The FACEIT API key is stored in plain text, the same way the browser stores any other
+        extension setting. It is <b>not</b> additionally encrypted, because a browser extension has
+        nowhere to keep a decryption key that an attacker with access to the same profile could not
+        read as well — such encryption would look like protection without being one. Anyone with
+        access to the browser profile or to the device can therefore read the key.</li>
+    <li>The key in question is a <b>Server side FACEIT Data API key</b>, issued to the user by FACEIT.
+        It grants read-only access to public FACEIT statistics. It does not control the user's FACEIT
+        account, cannot change anything there, and carries no payment or identity capability.</li>
+    <li>Requests to <code>https://open.faceit.com</code> are made over HTTPS only. The key travels in
+        the <code>Authorization</code> header; redirects are refused, so the key cannot be forwarded
+        to another host. Cookies are not attached to these requests.</li>
+    <li>Recommended practice: use a key created specifically for this Extension, and revoke it at
+        <a href="https://developers.faceit.com/apps">developers.faceit.com</a> if the device is lost
+        or shared. The options page has a "Delete key" button that removes it from browser storage
+        immediately.</li>
+  </ul>
+
+  <h2>Retention</h2>
+  <p>The key, nickname and settings are kept until the user deletes them or removes the Extension —
+     there is no expiry, because there is no server-side copy to expire. Match statistics live only in
+     memory while the browser session lasts and are never written to disk.</p>
+
   <h2>Data deletion</h2>
   <p>The user can delete all Extension data at any time, without contacting the Developer:</p>
   <ul>
@@ -105,7 +132,7 @@
   <hr />
 
   <h1 id="ru">Политика конфиденциальности</h1>
-  <p class="date">d1FFmaps · обновлено 21 сентября 2026</p>
+  <p class="date">d1FFmaps · обновлено 22 сентября 2026</p>
 
   <h2>Кто и что</h2>
   <p>Эта политика относится к расширению браузера <b>d1FFmaps</b> — анализатор лобби FACEIT CS2
@@ -150,6 +177,34 @@
     <li>Скрипт на страницах <code>https://www.faceit.com/*</code> — отрисовка панели с анализом
         на странице матча.</li>
   </ul>
+
+  <h2>Хранение и безопасность</h2>
+  <ul>
+    <li>Все данные остаются на устройстве пользователя, в собственном хранилище расширения
+        (<code>chrome.storage.local</code>). Сервера у Расширения нет, поэтому передавать и хранить
+        что-либо удалённо не требуется.</li>
+    <li>Ключ FACEIT API хранится открытым текстом — так же, как браузер хранит любую другую настройку
+        расширения. Дополнительно он <b>не шифруется</b>: расширению негде держать ключ расшифровки так,
+        чтобы его не прочитал тот, у кого есть доступ к тому же профилю браузера. Такое шифрование
+        выглядело бы защитой, не являясь ею. Поэтому любой, у кого есть доступ к профилю браузера или
+        к устройству, может прочитать ключ.</li>
+    <li>Речь идёт о ключе <b>Server side FACEIT Data API</b>, который пользователь получает у FACEIT.
+        Он даёт доступ только на чтение публичной статистики FACEIT: он не управляет аккаунтом
+        пользователя, ничего в нём не меняет и не связан с платежами или подтверждением личности.</li>
+    <li>Запросы к <code>https://open.faceit.com</code> идут только по HTTPS. Ключ передаётся
+        в заголовке <code>Authorization</code>; переадресации запрещены, поэтому ключ не может уйти
+        на чужой хост. Куки к этим запросам не прикрепляются.</li>
+    <li>Рекомендация: заведите отдельный ключ именно для этого Расширения и отзовите его на
+        <a href="https://developers.faceit.com/apps">developers.faceit.com</a>, если устройство
+        потеряно или им пользуется кто-то ещё. Кнопка «Удалить ключ» на странице настроек убирает его
+        из хранилища браузера немедленно.</li>
+  </ul>
+
+  <h2>Сроки хранения</h2>
+  <p>Ключ, ник и настройки хранятся до тех пор, пока пользователь их не удалит или не удалит
+     Расширение: срока давности нет, потому что нет и серверной копии, которую нужно было бы удалять.
+     Статистика матча живёт только в оперативной памяти в течение сессии браузера и на диск
+     не записывается.</p>
 
   <h2>Удаление данных</h2>
   <p>Пользователь в любой момент может удалить все данные Расширения самостоятельно,
